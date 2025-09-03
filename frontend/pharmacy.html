@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QDB Hospital - Pharmacy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container py-5">
+    <h1 class="text-2xl font-bold mb-4">Pharmacy</h1>
+    <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addMedicineModal">+ Add Medicine</button>
+
+    <table class="table table-striped shadow-sm">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Stock</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="medicinesTable"></tbody>
+    </table>
+  </div>
+
+  <!-- Add Medicine Modal -->
+  <div class="modal fade" id="addMedicineModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-4">
+        <h5 class="modal-title">Add Medicine</h5>
+        <form id="medicineForm">
+          <input type="text" class="form-control mb-2" id="name" placeholder="Name" required>
+          <input type="number" class="form-control mb-2" id="stock" placeholder="Stock" required>
+          <input type="number" class="form-control mb-2" id="price" placeholder="Price" required>
+          <input type="date" class="form-control mb-2" id="expiry_date">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<script src="assets/js/pharmacy.js"></script>
+</body>
+</html>
