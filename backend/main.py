@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .database import engine, Base
-from .routers import auth_routes, staff, departments, patients, appointments, pharmacy, lab, billing
+from database import engine, Base
+from routers import auth_routes, staff, departments, patients, appointments, pharmacy, lab, billing
 
 # create tables
 Base.metadata.create_all(bind=engine)
